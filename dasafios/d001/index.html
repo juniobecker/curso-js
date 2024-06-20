@@ -26,7 +26,8 @@
     <script>
        var nome = window.prompt('Digite seu nome!')
         window.alert(`Olá, ${nome}, prazer em conhece-lo!`)
-        
+        document.write(`<br> Seu nome em maiúsculas fica ${nome.toUpperCase()}!`)
+        document.write(`<br> Seu nome em minúsculas fica ${nome.toLowerCase()}!`)
         function clicou1() {
             window.alert('Você clicou no botão 01!')
         }
@@ -34,7 +35,7 @@
             window.alert('Você clicou no botão 02!')
         }
         function clicou3() {
-            window.alert('Você clicou no botão 03!')
+            window.alert('Você clicou no botão 03! <br>')
         }
     </script>
 </body>
