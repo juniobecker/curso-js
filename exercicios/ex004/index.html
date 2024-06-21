@@ -9,13 +9,14 @@
     <h1>Trabalhando com dados v2.0</h1>
     <button onclick="inicio()">Clique aqui para começar</button>
     <section id="resultado">
-
+        <p>Aqui vai aparecer o resultado...</p>
     </section>
     <script>
         function inicio() {
-            let nome = window.prompt('Qula é seu nome?')
+            let nome = window.prompt('Qual é seu nome?')
             let res = window.document.getElementById('resultado')
-            res.innerHTML = `Olá, <strong>${nome}<strong> ! É um grande prazer te conhecer! &#x1F599`
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong> ! É um grande prazer te conhecer! &#x1F599` /*Podemos usar tanto o simbolo sem o '+' ou com o '+=' assim o resultado ao invés de substituir o paragrafo da section ela vai adicionar o resultado juntamento com o paragrafo da section é só acrecentar'+' junto com o sinal de receber(=) */
+            
         }
     </script>
 </body>
