@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecessor e Sucessor</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        body {
+            background-color: lightgrey;
+        }
+
+        h1 {
+            background: linear-gradient(to left, red, rgb(5, 194, 5), rgb(67, 67, 252));
+            background-clip: text;
+            display: inline;
+            color: transparent;
+            animation: animated 5s linear infinite;
+        }
+        @keyframes animated {
+            to {background-position-x:  161px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <p>Obrigado por estar aqui! </p>
+    <h2>Clique abaixo e faça o desafio, obrigado.</h2>
+
+    <button onclick="clicou()">Iniciar Teste</button>
+
+
+    <script>
+        function clicou() {
+            var n1 = Number.parseInt(window.prompt('Digite um número inteiro:'))
+            window.alert(`Antes do ${n1}, temos o número ${n1 - 1}. 
+Depois do ${n1}, temos o número ${n1 + 1}. `)
+            
+        }
+    </script>
+</body>
+</html>
