@@ -15,10 +15,10 @@
             var produto = window.prompt('Qual produto você quer comprar?')
             var preço = window.prompt('Qual o valor do produto?')
             var valor = window.prompt('Qual valor você deu para pagar esse produto?')
-            var troco = window.alert(
+            var troco = Number.perseInt(window.alert(
 `Você comprou ${produto} que custou R$ ${preço}. 
-Deu R$ ${valor} em dinheiro e vai receber troco de R$ ${valor - preço}.
-Volte sempre!`)
+Deu R$ ${valor} em dinheiro e vai receber troco de R$ ${preço - valor}.
+Volte sempre!`))
         }
     </script>
 </body>
