@@ -13,12 +13,14 @@
     <script>
         function clicou() {
             var produto = window.prompt('Qual produto você quer comprar?')
-            var preço = window.prompt('Qual o valor do produto?')
-            var valor = window.prompt('Qual valor você deu para pagar esse produto?')
-            var troco = Number.perseInt(window.alert
-(`Você comprou ${produto} que custou R$ ${preço}. 
-Deu R$ ${valor} em dinheiro e vai receber troco de R$ ${preço - valor}.
-Volte sempre!`))
+            var preço = Number(window.prompt('Qual o valor do produto?'))
+            var valor = Number(window.prompt('Qual valor você deu para pagar esse produto?'))
+            var troco = (preço - valor) 
+            
+window.alert
+(`Você comprou ${produto} que custou R$ ${preço.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. 
+Deu R$ ${valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber troco de ${troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.
+Volte sempre!`)
         }
     </script>
 </body>
