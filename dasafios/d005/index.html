@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converso de medidas</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        button {
+            height: 50px;
+        }
+        section {
+            padding-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>conversor de Medidas</h1>
+
+    <button onclick="clicou()">Converter</button>
+    <section id="titulo">
+        <p>Clique no botão para iniciar</p>
+    </section>
+    <section id="km">
+
+    </section>
+    <section id="hm">
+
+    </section>
+    <section id="Dam">
+
+    </section>
+    <section id="dm">
+
+    </section>
+    <section id="cm">
+
+    </section>
+    <section id="mm">
+
+    </section>
+
+    <script>
+        function clicou() {
+            var medida = Number(window.prompt('Digite um Medida em metros(m)?'))
+            window.document.getElementById('titulo')
+            titulo.innerHTML = `<h1>A distância de ${medida.toFixed(2).replace('.', ',')} metros, corresponde a...</h1>`
+
+           var respk = medida / 1000
+            window.document.getElementById('km')
+            km.innerHTML = `${respk.toFixed(3).replace('.', ',')} Quilômetros (Km)`
+
+            var resph = medida / 100
+            window.document.getElementById('hm')
+            hm.innerHTML = `${resph.toFixed(3).replace('.',',')} Hectômetros (Hm)`
+
+            var respD = medida / 10 
+            window.document.getElementById('Dam')
+            Dam.innerHTML = `${respD.toFixed(3).replace('.',',')} Decâmetros (Dam)`
+
+            var respd = medida * 10 
+            window.document.getElementById('dm')
+            dm.innerHTML = `${respd.toFixed(3).replace('.',',')} Decímetros (dm)`
+
+            var respc = medida * 100
+            window.document.getElementById('cm')
+            cm.innerHTML = `${respc.toFixed(3).replace('.',',')} Centímetros (cm)`
+
+            var respm = medida * 1000
+            window.document.getElementById('mm')
+            mm.innerHTML = `${respm.toFixed(3).replace('.',',')} Milímetros (mm)`
+        }
+    </script>
+</body>
+</html>
