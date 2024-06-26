@@ -16,11 +16,20 @@
             var preço = Number(window.prompt('Qual o valor do produto?'))
             var valor = Number(window.prompt('Qual valor você deu para pagar esse produto?'))
             var troco = (valor - preço) 
-            
-window.alert
+
+            if(valor >= preço){
+                window.alert
 (`Você comprou ${produto} que custou R$ ${preço.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. 
 Deu R$ ${valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber troco de ${troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.
 Volte sempre!`)
+            } else {
+                window.alert('O valor que você deu é inferior ao preço do produto!')
+            }
+            
+
+            
+            
+
         }
     </script>
 </body>
