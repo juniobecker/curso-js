@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        section {
+            text-align: center;
+            padding-bottom: 25px;
+        }
+        button {
+            border: 1px solid black;
+            box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.466);
+            height: 40px;
+            display: block;
+            margin: auto;
+        }
+        button:hover {
+            background-color: lightblue;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+
+
+    <button onclick="clicou()">Converta Aqui!</button>
+
+    <section id="titulo">
+
+    </section>
+    <section id="kelvin">
+
+    </section>
+    <section id="fahrenheit">
+
+    </section>
+
+    <script>
+        function clicou() {
+            var graus = Number(window.prompt('Digite a temperatura em Graus Celsius:'))
+            window.document.getElementById('titulo')
+            titulo.innerHTML = `<h1>A temperatura de ${graus}°C, corresponde a...</h1>`
+
+
+            var respk = graus + 273.15
+            window.document.getElementById('kelvin')
+            kelvin.innerHTML = `A temperatura em Kelvin é: ${respk.toFixed(2).replace('.',',')}°K (Kelsvin)`
+
+            var respf = graus * 1.8 + 32
+            window.document.getElementById('fahrenheit')
+            fahrenheit.innerHTML = `A temperatura em Fahrenheit é: ${respf.toFixed(2).replace('.',',')}°F (Fahrenheit)`
+        }
+    </script>
+</body>
+</html>
