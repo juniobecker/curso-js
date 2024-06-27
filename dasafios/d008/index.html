@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            height: 40px;
+            display: block;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+
+        section, h2 {
+            margin-bottom: 25px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+        p {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Calculando Desconto</h1>
+
+    <button onclick="clicou()">Desconto de 10%</button>
+
+    <sectio id="titulo">
+        <p><strong>Clique no botão acima para iniciar!!!</strong></p>
+    </sectio>
+
+    <section id="preco">
+
+    </section>
+    <section id="desconto">
+
+    </section>
+    <section id="valorf"> <!--Valor final com o desconto-->
+
+    </section>
+
+    <script>
+        function clicou() {
+            var produto = window.prompt('Qual é o produto que você quer comprar?')
+            var valor = Number(window.prompt('Qual é o valor desse produto?'))
+
+            window.document.getElementById('titulo')
+            titulo.innerHTML = `<h2>Calculando o desconto de 10% para ${produto}</h2>`
+
+            window.document.getElementById('preco')
+            preco.innerHTML = `O preço original era ${valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+
+            var resd = (10  / 100) * valor
+            window.document.getElementById('desconto')
+            desconto.innerHTML = `Você acaba de ganhar ${resd.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de desconto (-10%)`
+
+            var resv = valor - resd
+            window.document.getElementById('valorf')
+            valorf.innerHTML = `No fim, você vai pagar ${resv.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} no produto ${produto}`
+
+
+        }
+    </script>
+</body>
+</html>
