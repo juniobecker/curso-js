@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monetário</title>
+    <style> 
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        section {
+            padding-top: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            height: 40px;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.568);
+            display: block;
+            margin: auto;
+        }
+        section {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Conversor R$ &rarr; US$</h1>
+
+
+    <button onclick="clicou()">Converter</button>
+    <section id="resultado">
+        <p><strong>Clique no botão acima para converter!!!</strong></p>
+    </section>
+
+
+
+    <script>
+
+        var dolar = Number(window.prompt('Digite a cotação atual do dolar$:'))
+
+        function clicou() {
+            var real = Number(window.prompt('Digite o valor que você tem na carteira:'))
+            var res = real / dolar 
+            window.document.getElementById('resultado')
+            resultado.innerHTML = `<strong>Você pode comprar ${res.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} em dolar</strong>`
+        }
+    </script>
+    
+</body>
+</html>
