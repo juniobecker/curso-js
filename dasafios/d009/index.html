@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de Salário</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightgray;
+        }
+
+        button {
+            height: 40px;
+            width: 300px;
+            font-weight: bolder;
+            display: block;
+            
+        }
+        h1.principal {
+            font-size: 40px;
+            background-color: rgb(153, 87, 153);
+            display: inline-block;
+            padding: 8px;
+            border-radius: 8px;
+            
+        }
+        h2 {
+        font-size: 18px;
+       }
+
+        p {
+            font-weight: bolder;
+        }
+
+        section {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="principal">Rejuste de Salário</h1>
+
+    <button onclick="clicou()">Reajuste Salarial</button>
+
+    <section id="titulo">
+        <p>Clique acima para reajustar o salário!!!</p>
+    </section>
+
+    <section id="atual">
+
+    </section>
+    <section id="aumento">
+
+    </section>
+    <section id="total">
+
+    </section>
+
+
+    <script>
+        function clicou() {
+            var nome = window.prompt('Qual é o nome do funcionário?')
+            var salario = Number(window.prompt(`Qual é o salário do ${nome}`))
+            var porcent = Number(window.prompt(`O salário de ${nome} vai se reajustado em qual porcentagem?`))
+
+            window.document.getElementById('titulo')
+            titulo.innerHTML = `<h2>${nome} recebeu um aumento salaria!</h2>`
+
+            window.document.getElementById('atual')
+            atual.innerHTML = `O salário atual era ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+
+            var aumen =
+            window.document.getElementById('aumento')
+            aumento.innerHTML = `Com um aumento de ${porcent}%, o salário vai aumentar ${aumen}`
+
+            window.document.getElementById('total')
+            
+
+        }
+    </script>
+</body>
+</html>
