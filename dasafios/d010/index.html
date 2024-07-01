@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Bhaskara</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Resolvendo a Bhaskara</h1>
+
+
+    <button onclick="clicou()">Calcular</button>
+
+    <section id="titulo">
+        <p>Considerando uma equeção no formato <strong>a<em>x</em>² + b<em>x</em> + c = 0</strong>, aperte <br> o botão acima para calcular o valor de &Delta; </p>
+    </section>
+
+    <section id="atual">
+
+    </section>
+    <section id="realizado">
+
+    </section>
+    <section id="calculado">
+
+    </section>
+
+    <script>
+        function clicou() {
+            var a = Number(window.prompt('Qual é o valor de a?'))
+            var b = Number(window.prompt('Qual é o valor de b?'))
+            var c = Number(window.prompt('Qual é o valor de c?'))
+
+
+            window.document.getElementById('titulo')
+            titulo.innerHTML = `<h2>Resolvendo Bhaskara</h2>`
+
+            window.document.getElementById('atual')
+            atual.innerHTML = `A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong>`
+
+            window.document.getElementById('realizado')
+            realizado.innerHTML = `o cáuculo realizado será <strong>&Delta; = ${b}x² - 4 . ${a} . ${c}</strong>`
+
+            var resp = b ** 2 - 4 * a * c
+            window.document.getElementById('calculado')
+            calculado.innerHTML = `O valor calculado foi <strong>&Delta; = ${resp}</strong>`
+        }
+    </script>
+</body>
+</html>
