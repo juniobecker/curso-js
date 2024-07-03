@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+mark {
+    background-color: rgba(0, 128, 0, 0.466);
+}

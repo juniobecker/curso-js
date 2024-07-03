@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ano Bisexto</title>
+    <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
     <h1>Ano bisexto</h1>
@@ -27,10 +28,10 @@
 
             if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
                  window.document.getElementById('resposta')
-                 resposta.innerHTML = `O ano de ${ano} É BISEXTO &#U+2705 `
+                 resposta.innerHTML = `O ano de ${ano} <mark><strong>É BISSEXTO &#x2705;</strong></mark> `
             } else{
                 window.document.getElementById('resposta')
-                resposta.innerHTML = `O ano de ${ano} NÃO É BISEXTO  `
+                resposta.innerHTML = `O ano de ${ano} NÃO É BISSEXTO  `
             }
 
         }
