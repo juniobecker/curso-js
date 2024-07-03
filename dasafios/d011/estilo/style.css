@@ -2,9 +2,41 @@
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
+body {
+    background: url(../imagens/fundo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    
+   
+}
 
-mark {
+h1 {
+    text-align: center;
+}
+
+#titulo {
+    font-weight: bolder ;
+    text-align: center;
+}
+ 
+section {
+    text-align: center;
+}
+button {
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 40px;
+    color: black;
+    
+    
+}
+mark.certo {
     background-color: rgba(0, 128, 0, 0.466);
+}
+
+.errado {
+    background-color: rgba(255, 0, 0, 0.466);
 }

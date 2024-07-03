@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-    <h1>Ano bisexto</h1>
+    
+        <h1>Ano bisexto</h1>
 
+        <button onclick="clicou()">Verificar</button>
 
-    <button onclick="clicou()">Verificar</button>
+        <section id="titulo">
+            <p>Informe um ano para saber se ele é bisexto</p>
+        </section>
 
-    <section id="titulo">
-        <p>Informe um ano para saber se ele é bisexto</p>
-    </section>
-    <section id="resposta">
-
-    </section>
+        <section id="resposta">
+            
+        </section>
+    
 
 
 
@@ -28,10 +30,12 @@
 
             if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
                  window.document.getElementById('resposta')
-                 resposta.innerHTML = `O ano de ${ano} <mark><strong>É BISSEXTO &#x2705;</strong></mark> `
+                 resposta.innerHTML = `O ano de ${ano} <mark class="certo"><strong>É BISSEXTO &#x2705</strong></mark> `
             } else{
                 window.document.getElementById('resposta')
-                resposta.innerHTML = `O ano de ${ano} NÃO É BISSEXTO  `
+                resposta.innerHTML = `O ano de ${ano} <strong>
+                    <mark class="errado">NÃO É BISSEXTO &#x274C</mark> 
+                </strong> `
             }
 
         }
