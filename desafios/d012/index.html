@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <h1>Preço mudou</h1>
+
+
+    <button onclick="clicou()">Verificar</button>
+
+    <section id="titulo">Clique no botão acima para analisar a mudança de preço.</section>
+
+    <section id="custava">
+
+    </section>
+    <section id="hoje">
+        
+    </section>
+    <section id="subiu">
+
+    </section>
+    <section id="dife">
+
+    </section>
+
+
+    <script>
+        function clicou() {
+            var anterior = Number(window.prompt('Qual era o valor anteriror?'))
+            var atual = Number(window.prompt('Qual é o valor atual?'))
+
+            window.document.getElementById('titulo')
+            titulo.innerHTML = `<h2>Analisando os valores informados...</h2>`
+
+            window.document.getElementById('custava')
+            custava.innerHTML = `O prduto custava ${anterior.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} e agora ele custa ${atual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+
+            if (anterior < atual) {
+                window.document.getElementById('hoje')
+                hoje.innerHTML = `Hoje o produto está mais caro.`
+                
+            } else if (anterior == atual) {
+
+                window.document.getElementById('hoje')
+                hoje.innerHTML = `Hoje o produto está com o mesmo valor!`
+
+            } else {
+                window.document.getElementById('hoje')
+                hoje.innerHTML = `Hoje o produto está mais barato`
+            }
+
+        }
+    </script>
+</body>
+</html>
