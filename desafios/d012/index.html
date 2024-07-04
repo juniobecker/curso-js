@@ -42,18 +42,30 @@
             if (anterior < atual) {
                 window.document.getElementById('hoje')
                 hoje.innerHTML = `Hoje o produto está mais caro.`
+
+                var resp = atual - anterior 
+                window.document.getElementById('subiu')
+                subiu.innerHTML = `O preço subiu ${resp.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior.`
                 
-            } else if (anterior == atual) {
+            } 
+                else if (anterior == atual) {
 
                 window.document.getElementById('hoje')
-                hoje.innerHTML = `Hoje o produto está com o mesmo valor!`
+                hoje.innerHTML = `Hoje o produto está com o mesmo valor.`
 
-            } else {
+            } else if (anterior > atual) {
+
                 window.document.getElementById('hoje')
                 hoje.innerHTML = `Hoje o produto está mais barato`
+                var respb = anterior - atual
+                window.document.getElementById('subiu')
+                subiu.innerHTML = `O preço caiu ${respb.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior. `
             }
 
-        }
+            
+
+
+            }
     </script>
 </body>
 </html>
