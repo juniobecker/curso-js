@@ -46,6 +46,10 @@
                 var resp = atual - anterior 
                 window.document.getElementById('subiu')
                 subiu.innerHTML = `O preço subiu ${resp.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior.`
+
+                var porcent = ((anterior - atual) / anterior) * 100
+                window.document.getElementById('dife')
+                dife.innerHTML = `Uma variação de ${porcent} para cima`
                 
             } 
                 else if (anterior == atual) {
@@ -60,6 +64,7 @@
                 var respb = anterior - atual
                 window.document.getElementById('subiu')
                 subiu.innerHTML = `O preço caiu ${respb.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior. `
+                
             }
 
             
