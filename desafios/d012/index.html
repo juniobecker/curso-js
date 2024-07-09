@@ -64,6 +64,10 @@
                 var respb = anterior - atual
                 window.document.getElementById('subiu')
                 subiu.innerHTML = `O preço caiu ${respb.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior. `
+
+                var porcent = (((anterior - atual) / anterior) * 100)
+                window.document.getElementById('dife')
+                dife.innerHTML = `Uma variação de ${porcent.toFixed('2').replace('.',',')}% para baixo`
                 
             }
 
