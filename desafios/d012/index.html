@@ -7,25 +7,20 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <h1>Preço mudou</h1>
-
-
-    <button onclick="clicou()">Verificar</button>
-
-    <section id="titulo">Clique no botão acima para analisar a mudança de preço.</section>
-
-    <section id="custava">
-
-    </section>
-    <section id="hoje">
+    <div>
+        <h1>Preço mudou</h1>
+        <button onclick="clicou()">Verificar</button>
+        <section id="titulo">Clique no botão acima para analisar a mudança de preço.</section>
+        <section id="custava">
+        </section>
+        <section id="hoje">
         
-    </section>
-    <section id="subiu">
-
-    </section>
-    <section id="dife">
-
-    </section>
+        </section>
+        <section id="subiu">
+        </section>
+        <section id="dife">
+        </section>
+    </div>
 
 
     <script>
@@ -65,7 +60,7 @@
                 window.document.getElementById('subiu')
                 subiu.innerHTML = `O preço caiu ${respb.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior. `
 
-                var porcent = (((anterior - atual) / anterior) * 100)
+                var porcent = (((anterior - atual) / anterior) * 100) 
                 window.document.getElementById('dife')
                 dife.innerHTML = `Uma variação de ${porcent.toFixed('2').replace('.',',')}% para baixo`
                 

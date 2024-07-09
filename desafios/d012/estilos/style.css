@@ -2,4 +2,36 @@
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
+
+body {
+    background-image: linear-gradient(to left, #01E5F0, #21BFC7, #35999E, #386D70, #2E4546);
+    margin-top: 25px;
+    text-align: center;
+}
+
+div {
+    width: 600px;
+    padding: 10px;
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    border: 3px solid black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+}
+
+h1 {
+    padding-top: 15px;
+    margin: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+section {
+    margin: 5px;
+}
+
