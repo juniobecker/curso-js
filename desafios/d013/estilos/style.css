@@ -8,4 +8,29 @@
 
 body {
     background-color: lightgray;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px;
+ }
+button {
+   height: 40px;
+   width: 100px;
+   margin: 10px;
+}
+
+section {
+    margin: 8px;
+}
+
+#aprov {
+    background-color: lightgreen;
+}
+#rec {
+    background-color: rgb(245, 171, 59);
+}
+
+#repro {
+    background-color: rgba(252, 54, 54, 0.856);
 }

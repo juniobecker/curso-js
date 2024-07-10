@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médio do Aluno</title>
+    <title>Média do Aluno</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    
+    <h1>Situação do Aluno</h1>
+
+    <button onclick="clicou()">Analise aqui.</button>
+
+    <section id="titulo">
+        <p>Clique aqui para analisar a nota aluno!!!!</p>
+    </section>
+    <section id="nota">
+
+    </section>
+    <section id="resultado">
+
+    </section>
+
+
+
+
+    <script>
+        function clicou() {
+            var nome = window.prompt('Qual é o nome do aluno?')
+            var nota1 = Number(window.prompt('Priemeira nota do aluno?'))
+            var nota2 = Number(window.prompt('Segunda nota do aluno?'))
+
+
+            var media = (nota1 + nota2) / 2 
+
+            window.document.getElementById('titulo')
+            titulo.innerHTML = `<h2>Analisando nota de ${nome}...</h2>`
+
+            window.document.getElementById('nota')
+            nota.innerHTML = `Com as notas de ${nota1.toFixed(2).replace('.',',')} e ${nota2.toFixed(2).replace('.',',')},<strong> a média é ${media.toFixed(2).replace('.',',')}</strong>`
+
+            if (media >= 6) {
+                window.document.getElementById('resultado')
+                resultado.innerHTML = `Com média acima de 6, o aluna está <mark id="aprov"><strong>APROVADO</strong></mark>`
+            } else if (media >= 3) {
+                window.document.getElementById('resultado')
+                resultado.innerHTML = `Com média entre 3 e 6, o aluno está em <mark id="rec"><strong>RECUPERAÇÃO</strong></mark>`
+            } else {
+                window.document.getElementById('resultado')
+                resultado.innerHTML = `Com nota abaixo de 3,0 , o aluno está <mark id="repro"><strong>REPROVADO</strong></mark>`
+            }
+        }
+    </script>
 </body>
 </html>
