@@ -20,7 +20,11 @@
         function clicou() {
             var txtn = window.document.getElementById('itxt').value
             var res = window.document.getElementById('resposta')
-            res.innerHTML = `Você é ${txtn}`
+            
+
+            if (txtn.value != brasileiro) {
+                res.innerHTML = `Você é strangeiro`
+            }
 
 
         }
