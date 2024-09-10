@@ -7,27 +7,30 @@
 </head>
 <body>
     <h1>Sistema de Nacionalidade</h1>
-    Digite sua Nacionalidade:<input type="text" name="" id="itxt">
-    <input type="button" value="Verificar" onclick="clicou()">
+   <label for="itxtn">Digite sua Nacionalidade</label>
+   <input type="text" name="txtn" id="itxtn">
+   <input type="button" value="Verificar" onclick="clicou()">
+     
 
-    <div id="resposta">
+   <div id="res">
 
-    </div>
-
-
-
-    <script>
-        function clicou() {
-            var txtn = window.document.getElementById('itxt').value
-            var res = window.document.getElementById('resposta')
-            
-
-            if (txtn.value != brasileiro) {
-                res.innerHTML = `Você é strangeiro`
-            }
+   </div>
 
 
-        }
-    </script>
+
+   <script>
+    function clicou() {
+    const nacionalidade = window.document.getElementById('itxtn').value.trim().toLowerCase()
+    const resultado = window.document.getElementById('res')
+
+    if (nacionalidade === "brasileira" || nacionalidade === "brasileiro" ) {
+        resultado.innerHTML = `Você é ${nacionalidade} então não é estrangeiro`
+    } else{
+        resultado.innerHTML = `Você é ${nacionalidade} então é estrangeiro!!!`
+    }
+}
+
+   </script>
+
 </body>
 </html>
